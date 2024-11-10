@@ -145,3 +145,5 @@ for i, endpoint in enumerate(endpoints):
 update_status_json("Completed", "Bypass script completed.")
 print("Bypass script completed. Check bypass_debug.log and status.json for details.")
 input("Press Enter to exit...")
+with open("status.json", "w") as json_file:
+    json.dump(status_data, json_file, indent=4)
